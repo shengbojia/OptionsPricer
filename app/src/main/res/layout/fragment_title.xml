@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".TitleFragment">
+
+    <android.support.constraint.ConstraintLayout
+            android:background="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <!-- TODO: Update blank fragment layout -->
+        <Button
+                android:id="@+id/btn_title_blackscholes"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/btn_title_greeks"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                android:text="@string/all_blackscholes"
+                app:backgroundTint="@color/colorPrimary"
+                style="@style/TitleButtonStyle"/>
+
+        <Button
+                android:id="@+id/btn_title_greeks"
+                app:layout_constraintTop_toBottomOf="@id/btn_title_blackscholes"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/all_greeks"
+                app:backgroundTint="@color/colorPrimary"
+                style="@style/TitleButtonStyle"/>
+    </android.support.constraint.ConstraintLayout>
+</layout>
