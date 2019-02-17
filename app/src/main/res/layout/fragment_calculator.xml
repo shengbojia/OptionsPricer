@@ -11,46 +11,104 @@
 
         <!-- TODO: Update blank fragment layout -->
 
-        <TextView
-                android:id="@+id/tv_calc_stocklabel"
-                android:text="@string/all_stockprice"
+
+
+        <GridLayout
+                android:id="@+id/gridlayout_calc_input"
+                android:layout_marginTop="@dimen/margin_calc_inputlabel"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/tv_calc_strikelabel"
-                style="@style/InputLabelStyle"/>
+                app:layout_constraintEnd_toEndOf="parent"
+                android:rowCount="5"
+                android:columnCount="3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <TextView
-                android:id="@+id/tv_calc_strikelabel"
-                android:text="@string/all_strikeprice"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_calc_stocklabel"
-                app:layout_constraintBottom_toTopOf="@id/tv_calc_timelabel"
-                style="@style/InputLabelStyle" />
+            <TextView
+                    android:id="@+id/tv_calc_stocklabel"
+                    android:text="@string/all_stockprice"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/tv_calc_strikelabel"
+                    style="@style/InputLabelStyle"/>
 
-        <TextView
-                android:id="@+id/tv_calc_timelabel"
-                android:text="@string/all_maturity"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_calc_strikelabel"
-                app:layout_constraintBottom_toTopOf="@id/tv_calc_vollabel"
-                style="@style/InputLabelStyle"/>
+            <EditText
+                    android:id="@+id/et_calc_stockinput"
+                    android:hint="@string/all_currency"
+                    style="@style/InputFieldStyle"/>
 
-        <TextView
-                android:id="@+id/tv_calc_vollabel"
-                android:text="@string/all_volatility"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_calc_timelabel"
-                app:layout_constraintBottom_toTopOf="@id/tv_calc_riskfreelabel"
-                style="@style/InputLabelStyle"/>
+            <TextView
+                    android:id="@+id/tv_calc_stockerror"
+                    style="@style/InputErrorStyle"/>
 
-        <TextView
-                android:id="@+id/tv_calc_riskfreelabel"
-                android:text="@string/all_riskfree"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_calc_vollabel"
-                style="@style/InputLabelStyle"/>
+            <TextView
+                    android:id="@+id/tv_calc_strikelabel"
+                    android:text="@string/all_strikeprice"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_calc_stocklabel"
+                    app:layout_constraintBottom_toTopOf="@id/tv_calc_timelabel"
+                    style="@style/InputLabelStyle" />
 
+            <EditText
+                    android:id="@+id/et_calc_strikeinput"
+                    android:hint="@string/all_currency"
+                    style="@style/InputFieldStyle"/>
 
+            <TextView
+                    android:id="@+id/tv_calc_strikeerror"
+                    style="@style/InputErrorStyle"/>
+
+            <TextView
+                    android:id="@+id/tv_calc_timelabel"
+                    android:text="@string/all_maturity"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_calc_strikelabel"
+                    app:layout_constraintBottom_toTopOf="@id/tv_calc_vollabel"
+                    style="@style/InputLabelStyle"/>
+
+            <EditText
+                    android:id="@+id/et_calc_timeinput"
+                    android:hint="@string/all_timeunit"
+                    style="@style/InputFieldStyle"/>
+
+            <TextView
+                    android:id="@+id/tv_calc_timeerror"
+                    style="@style/InputErrorStyle"/>
+
+            <TextView
+                    android:id="@+id/tv_calc_vollabel"
+                    android:text="@string/all_volatility"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_calc_timelabel"
+                    app:layout_constraintBottom_toTopOf="@id/tv_calc_rflabel"
+                    style="@style/InputLabelStyle"/>
+
+            <EditText
+                    android:id="@+id/et_calc_volinput"
+                    android:hint="@string/all_percent"
+                    style="@style/InputFieldStyle"/>
+
+            <TextView
+                    android:id="@+id/tv_calc_volerror"
+                    style="@style/InputErrorStyle"/>
+
+            <TextView
+                    android:id="@+id/tv_calc_rflabel"
+                    android:text="@string/all_riskfree"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_calc_vollabel"
+                    style="@style/InputLabelStyle"/>
+
+            <EditText
+                    android:id="@+id/et_calc_rfinput"
+                    android:hint="@string/all_percent"
+                    style="@style/InputFieldStyle"/>
+
+            <TextView
+                    android:id="@+id/tv_calc_rferror"
+                    style="@style/InputErrorStyle"/>
+
+        </GridLayout>
 
 
     </android.support.constraint.ConstraintLayout>

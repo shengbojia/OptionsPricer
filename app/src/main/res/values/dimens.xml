@@ -2,6 +2,9 @@
 <resources>
     <dimen name="padding_title_button">15dp</dimen>
     <dimen name="width_title_button">250dp</dimen>
-    <dimen name="width_calc_inputlabel">125dp</dimen>
+
+    <dimen name="width_calc_inputlabel">200dp</dimen>
     <dimen name="margin_calc_inputlabel">20dp</dimen>
+    <dimen name="textsize_calc_inputlabel">18sp</dimen>
+    <dimen name="width_calc_inputfield">100dp</dimen>
 </resources>

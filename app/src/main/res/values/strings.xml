@@ -10,4 +10,7 @@
     <string name="all_volatility">Volatility</string>
     <string name="all_maturity">Time to maturity</string>
     <string name="all_riskfree">Risk-free rate</string>
+    <string name="all_currency">USD</string>
+    <string name="all_timeunit">in years</string>
+    <string name="all_percent">annual %</string>
 </resources>
