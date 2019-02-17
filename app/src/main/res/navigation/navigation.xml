@@ -4,6 +4,15 @@
             xmlns:tools="http://schemas.android.com/tools" android:id="@+id/navigation"
             app:startDestination="@id/titleFragment">
 
-    <fragment android:id="@+id/titleFragment" android:name="com.shengbojia.optionspricer.TitleFragment"
-              android:label="fragment_title" tools:layout="@layout/fragment_title"/>
+    <fragment android:id="@+id/titleFragment" android:name="com.shengbojia.optionspricer.ui.TitleFragment"
+              android:label="fragment_title" tools:layout="@layout/fragment_title">
+
+        <action android:id="@+id/action_titleFragment_to_blackScholesFragment"
+                app:destination="@id/blackScholesFragment"/>
+
+    </fragment>
+
+
+    <fragment android:id="@+id/blackScholesFragment" android:name="com.shengbojia.optionspricer.ui.BlackScholesFragment"
+              android:label="fragment_black_scholes" tools:layout="@layout/fragment_black_scholes"/>
 </navigation>

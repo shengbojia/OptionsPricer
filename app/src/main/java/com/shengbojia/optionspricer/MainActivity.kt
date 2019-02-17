@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.shengbojia.optionspricer.databinding.ActivityMainBinding
 import com.shengbojia.calculator.BlackScholesCalculator
+import com.shengbojia.optionspricer.R
 
 
 class MainActivity : AppCompatActivity() {
@@ -12,6 +13,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         @Suppress("UNUSED_VARIABLE")
-        val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
+        val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this,
+            R.layout.activity_main
+        )
     }
 }

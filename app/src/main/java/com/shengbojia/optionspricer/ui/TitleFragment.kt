@@ -1,13 +1,14 @@
-package com.shengbojia.optionspricer
+package com.shengbojia.optionspricer.ui
 
-import android.content.Context
 import android.databinding.DataBindingUtil
-import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
+import androidx.navigation.findNavController
+import com.shengbojia.optionspricer.R
 
 import com.shengbojia.optionspricer.databinding.FragmentTitleBinding
 
@@ -29,6 +30,10 @@ class TitleFragment : Fragment() {
 
         val binding = DataBindingUtil.inflate<FragmentTitleBinding>(
             inflater, R.layout.fragment_title, container, false)
+
+        binding.btnTitleBlackscholes.setOnClickListener {
+            it.findNavController().navigate(R.id.action_titleFragment_to_blackScholesFragment)
+        }
 
         return binding.root
     }
