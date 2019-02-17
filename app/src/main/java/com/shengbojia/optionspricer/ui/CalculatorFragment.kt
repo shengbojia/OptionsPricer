@@ -16,7 +16,7 @@ import com.shengbojia.optionspricer.R
  * A simple [Fragment] subclass.
  *
  */
-class BlackScholesFragment : Fragment() {
+class CalculatorFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater,
                               container: ViewGroup?,
@@ -24,7 +24,7 @@ class BlackScholesFragment : Fragment() {
     ): View? {
 
         val binding = DataBindingUtil.inflate<FragmentBlackScholesBinding>(
-            inflater, R.layout.fragment_black_scholes, container, false)
+            inflater, R.layout.fragment_calculator, container, false)
 
         return binding.root
     }

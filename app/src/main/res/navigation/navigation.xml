@@ -7,12 +7,12 @@
     <fragment android:id="@+id/titleFragment" android:name="com.shengbojia.optionspricer.ui.TitleFragment"
               android:label="fragment_title" tools:layout="@layout/fragment_title">
 
-        <action android:id="@+id/action_titleFragment_to_blackScholesFragment"
-                app:destination="@id/blackScholesFragment"/>
+        <action android:id="@+id/action_titleFragment_to_calculatorFragment"
+                app:destination="@id/calculatorFragment"/>
 
     </fragment>
 
 
-    <fragment android:id="@+id/blackScholesFragment" android:name="com.shengbojia.optionspricer.ui.BlackScholesFragment"
-              android:label="fragment_black_scholes" tools:layout="@layout/fragment_black_scholes"/>
+    <fragment android:id="@+id/calculatorFragment" android:name="com.shengbojia.optionspricer.ui.CalculatorFragment"
+              android:label="fragment_calculator" tools:layout="@layout/fragment_calculator"/>
 </navigation>

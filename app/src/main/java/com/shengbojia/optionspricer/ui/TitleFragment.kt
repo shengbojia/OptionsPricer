@@ -32,7 +32,7 @@ class TitleFragment : Fragment() {
             inflater, R.layout.fragment_title, container, false)
 
         binding.btnTitleBlackscholes.setOnClickListener {
-            it.findNavController().navigate(R.id.action_titleFragment_to_blackScholesFragment)
+            it.findNavController().navigate(R.id.action_titleFragment_to_calculatorFragment)
         }
 
         return binding.root

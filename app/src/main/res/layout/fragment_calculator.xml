@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/layout2">
+    <android.support.constraint.ConstraintLayout
+            android:background="@color/colorAccent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.CalculatorFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <TextView
+                android:id="@+id/tv_calc_stocklabel"
+                android:text="@string/all_stockprice"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/tv_calc_strikelabel"
+                style="@style/InputLabelStyle"/>
+
+        <TextView
+                android:id="@+id/tv_calc_strikelabel"
+                android:text="@string/all_strikeprice"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_calc_stocklabel"
+                app:layout_constraintBottom_toTopOf="@id/tv_calc_timelabel"
+                style="@style/InputLabelStyle" />
+
+        <TextView
+                android:id="@+id/tv_calc_timelabel"
+                android:text="@string/all_maturity"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_calc_strikelabel"
+                app:layout_constraintBottom_toTopOf="@id/tv_calc_vollabel"
+                style="@style/InputLabelStyle"/>
+
+        <TextView
+                android:id="@+id/tv_calc_vollabel"
+                android:text="@string/all_volatility"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_calc_timelabel"
+                app:layout_constraintBottom_toTopOf="@id/tv_calc_riskfreelabel"
+                style="@style/InputLabelStyle"/>
+
+        <TextView
+                android:id="@+id/tv_calc_riskfreelabel"
+                android:text="@string/all_riskfree"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_calc_vollabel"
+                style="@style/InputLabelStyle"/>
+
+
+
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

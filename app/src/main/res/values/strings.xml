@@ -5,4 +5,9 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="all_blackscholes">Black-Scholes-Merton</string>
     <string name="all_greeks">Greeks</string>
+    <string name="all_stockprice">Stock price</string>
+    <string name="all_strikeprice">Strike price</string>
+    <string name="all_volatility">Volatility</string>
+    <string name="all_maturity">Time to maturity</string>
+    <string name="all_riskfree">Risk-free rate</string>
 </resources>
