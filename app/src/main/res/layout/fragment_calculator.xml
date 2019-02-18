@@ -110,6 +110,16 @@
 
         </GridLayout>
 
+        <Button
+                android:id="@+id/btn_calc_calculate"
+                app:layout_constraintTop_toBottomOf="@id/gridlayout_calc_input"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/all_calculate"
+               app:backgroundTint="@color/colorPrimaryDark"
+                android:layout_marginTop="@dimen/margin_calc_inputlabel"
+                style="@style/TitleButtonStyle"/>
+
 
     </android.support.constraint.ConstraintLayout>
 </layout>

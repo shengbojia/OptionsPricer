@@ -13,4 +13,5 @@
     <string name="all_currency">USD</string>
     <string name="all_timeunit">in years</string>
     <string name="all_percent">annual %</string>
+    <string name="all_calculate">Calculate</string>
 </resources>
