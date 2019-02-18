@@ -14,4 +14,7 @@
     <string name="all_timeunit">in years</string>
     <string name="all_percent">annual %</string>
     <string name="all_calculate">Calculate</string>
+    <string name="all_call">Call</string>
+    <string name="all_put">Put</string>
+    <string name="all_optionsprice">Price</string>
 </resources>

@@ -120,6 +120,54 @@
                 android:layout_marginTop="@dimen/margin_calc_inputlabel"
                 style="@style/TitleButtonStyle"/>
 
+        <GridLayout
+                android:id="@+id/gridlayout_calc_output"
+                android:layout_marginTop="@dimen/margin_calc_inputlabel"
+                android:columnCount="3"
+                android:rowCount="7"
+                app:layout_constraintTop_toBottomOf="@id/btn_calc_calculate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0"
+                app:layout_constraintHorizontal_bias="0.5"
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:text=""
+                    style="@style/OutputFieldStyle"/>
+
+            <TextView
+                    android:id="@+id/tv_calc_calllabel"
+                    style="@style/OutputFieldStyle"
+                    android:text="@string/all_call"
+                    android:textStyle="bold"/>
+
+            <TextView
+                    android:id="@+id/tv_calc_putlabel"
+                    style="@style/OutputFieldStyle"
+                    android:text="@string/all_put"
+                    android:textStyle="bold"/>
+
+            <TextView
+                    android:id="@+id/tv_calc_pricelabel"
+                    style="@style/OutputFieldStyle"
+                    android:text="@string/all_optionsprice"
+                    android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_calc_cprice"
+                style="@style/OutputFieldStyle"/>
+
+            <TextView
+                    android:id="@+id/tv_calc_pprice"
+                    style="@style/OutputFieldStyle"/>
+
+
+
+        </GridLayout>
 
     </android.support.constraint.ConstraintLayout>
 </layout>

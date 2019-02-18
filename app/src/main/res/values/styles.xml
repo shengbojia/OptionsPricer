@@ -45,4 +45,12 @@
         <item name="android:inputType">numberDecimal</item>
     </style>
 
+    <style name="OutputFieldStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">@dimen/width_calc_outputfield</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:paddingTop">@dimen/padding_title_button</item>
+        <item name="android:paddingBottom">@dimen/padding_title_button</item>
+    </style>
+
 </resources>
