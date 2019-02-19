@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
+
 import com.shengbojia.optionspricer.R
 
 import com.shengbojia.optionspricer.databinding.FragmentTitleBinding

@@ -12,11 +12,12 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.TextView
 
+import com.shengbojia.optionspricer.R
+import com.shengbojia.optionspricer.calculator.OptionsCalculator
 import com.shengbojia.optionspricer.databinding.FragmentCalculatorBinding
 
-import com.shengbojia.optionspricer.R
 import kotlinx.android.synthetic.main.fragment_calculator.*
-import com.shengbojia.optionspricer.calculator.OptionsCalculator
+
 import java.math.BigDecimal
 
 /**
@@ -84,6 +85,8 @@ class CalculatorFragment : Fragment() {
     ) {
         displayBox.text = error
     }
+
+    // TODO: Consider separating the execution of calculation to a different object
 
     private fun calculate() {
 

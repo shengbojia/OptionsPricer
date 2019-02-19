@@ -6,6 +6,7 @@ import java.math.BigDecimal
 import java.math.MathContext
 
 class OptionsCalculator : BlackScholesCalculator() {
+    // TODO: Calculate greeks
 
     fun percentToBigDecimal(percent: BigDecimal,
                                     precision: MathContext = DEFAULT_PRECISION
