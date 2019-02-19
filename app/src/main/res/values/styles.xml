@@ -28,10 +28,12 @@
     </style>
 
     <style name="InputErrorStyle">
-        <item name="android:layout_width">@dimen/width_calc_inputlabel</item>
+        <item name="android:layout_width">@dimen/width_calc_errorfield</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">@dimen/margin_calc_inputlabel</item>
+        <item name="android:visibility">invisible</item>
         <item name="android:textAlignment">center</item>
+        <item name="android:textSize">@dimen/textsize_calc_error</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textColor">@color/colorError</item>
     </style>
