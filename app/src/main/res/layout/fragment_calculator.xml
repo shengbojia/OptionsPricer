@@ -9,10 +9,6 @@
             android:layout_height="match_parent"
             tools:context=".ui.CalculatorFragment">
 
-        <!-- TODO: Update blank fragment layout -->
-
-
-
         <GridLayout
                 android:id="@+id/gridlayout_calc_input"
                 android:layout_marginTop="@dimen/margin_calc_inputlabel"
@@ -165,8 +161,6 @@
             <TextView
                     android:id="@+id/tv_calc_pprice"
                     style="@style/OutputFieldStyle"/>
-
-
 
         </GridLayout>
 

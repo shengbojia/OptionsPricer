@@ -5,14 +5,38 @@ import com.shengbojia.calculator.BlackScholesCalculator
 import java.math.BigDecimal
 import java.math.MathContext
 
-class OptionsCalculator : BlackScholesCalculator() {
+class OptionsCalculator() : BlackScholesCalculator() {
+    private lateinit var inputData: CalculatorInput
     // TODO: Calculate greeks
 
-    fun percentToBigDecimal(percent: BigDecimal,
-                                    precision: MathContext = DEFAULT_PRECISION
-    ): BigDecimal {
-        Log.i("divide", "right before return")
-        return percent.divide(BigDecimal.TEN, DEFAULT_PRECISION)
-            .divide(BigDecimal.TEN, DEFAULT_PRECISION)
+    fun setData(inputData: CalculatorInput?) {
+        this.inputData = inputData ?: CalculatorInput(
+            BigDecimal.ZERO,
+            BigDecimal.ZERO,
+            BigDecimal.ZERO,
+            BigDecimal.ZERO,
+            BigDecimal.ZERO
+        )
     }
+
+    fun callPrice(): BigDecimal {
+        return super.callPricing(
+            inputData.stock,
+            inputData.strike,
+            inputData.maturity,
+            inputData.volatility,
+            inputData.riskFree
+        )
+    }
+
+    fun putPrice(): BigDecimal {
+        return super.putPricing(
+            inputData.stock,
+            inputData.strike,
+            inputData.maturity,
+            inputData.volatility,
+            inputData.riskFree
+        )
+    }
+
 }
