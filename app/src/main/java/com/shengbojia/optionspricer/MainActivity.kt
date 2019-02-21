@@ -1,11 +1,10 @@
 package com.shengbojia.optionspricer
 
 import android.databinding.DataBindingUtil
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import com.shengbojia.optionspricer.databinding.ActivityMainBinding
+import android.support.v7.app.AppCompatActivity
 import com.shengbojia.calculator.BlackScholesCalculator
-import com.shengbojia.optionspricer.R
+import com.shengbojia.optionspricer.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {

@@ -11,4 +11,5 @@
     <dimen name="width_calc_errorfield">90dp</dimen>
 
     <dimen name="width_calc_outputfield">125dp</dimen>
+    <dimen name="height_title_art">200dp</dimen>
 </resources>

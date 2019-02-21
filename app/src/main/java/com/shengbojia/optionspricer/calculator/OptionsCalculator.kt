@@ -1,11 +1,9 @@
 package com.shengbojia.optionspricer.calculator
 
-import android.util.Log
 import com.shengbojia.calculator.BlackScholesCalculator
 import java.math.BigDecimal
-import java.math.MathContext
 
-class OptionsCalculator() : BlackScholesCalculator() {
+class OptionsCalculator : BlackScholesCalculator() {
     private lateinit var inputData: CalculatorInput
     // TODO: Calculate greeks
 
