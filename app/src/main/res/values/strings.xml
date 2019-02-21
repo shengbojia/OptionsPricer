@@ -17,4 +17,5 @@
     <string name="all_call">Call</string>
     <string name="all_put">Put</string>
     <string name="all_optionsprice">Price</string>
+    <string name="all_help">Help</string>
 </resources>
