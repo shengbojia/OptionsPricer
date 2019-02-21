@@ -2,6 +2,7 @@ package com.shengbojia.optionspricer.ui
 
 import android.content.Context
 import android.databinding.DataBindingUtil
+import android.graphics.LinearGradient
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.util.Log
@@ -20,6 +21,8 @@ import com.shengbojia.optionspricer.databinding.FragmentCalculatorBinding
 import kotlinx.android.synthetic.main.fragment_calculator.*
 
 import java.math.BigDecimal
+import java.math.RoundingMode
+import java.text.DecimalFormat
 import java.text.NumberFormat
 
 /**
@@ -55,9 +58,7 @@ class CalculatorFragment : Fragment() {
             Log.d(TAG, "All inputs are valid")
 
             calculator.setData(packInputData())
-            tv_calc_cprice.text = NumberFormat.getCurrencyInstance().format(calculator.callPrice().toDouble())
-            tv_calc_pprice.text = NumberFormat.getCurrencyInstance().format(calculator.putPrice().toDouble())
-            gridlayout_calc_output.visibility = View.VISIBLE
+            updateTable()
         }
 
         val imm = activity?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
@@ -160,6 +161,38 @@ class CalculatorFragment : Fragment() {
             .toBigDecimal()
             .divide(BigDecimal.TEN)
             .divide(BigDecimal.TEN)
+    }
+
+    private fun updateTable() {
+
+        tv_calc_cprice.text = calculator.callPrice().toCurrencyString()
+        tv_calc_pprice.text = calculator.putPrice().toCurrencyString()
+
+        tv_calc_cdelta.text = calculator.cDelta().toDisplayString()
+        tv_calc_pdelta.text = calculator.pDelta().toDisplayString()
+
+        tv_calc_cgamma.text = calculator.cGamma().toDisplayString()
+        tv_calc_pgamma.text = calculator.pGamma().toDisplayString()
+
+        tv_calc_cvega.text = calculator.cVega().toDisplayString()
+        tv_calc_pvega.text = calculator.pVega().toDisplayString()
+
+        tv_calc_ctheta.text = calculator.cTheta().toDisplayString()
+        tv_calc_ptheta.text = calculator.pTheta().toDisplayString()
+
+        tv_calc_crho.text = calculator.cRho().toDisplayString()
+        tv_calc_prho.text = calculator.pRho().toDisplayString()
+
+        gridlayout_calc_output.visibility = View.VISIBLE
+    }
+
+    private fun BigDecimal.toCurrencyString(): String {
+        return NumberFormat.getCurrencyInstance().format(this.toDouble())
+    }
+
+    private fun BigDecimal.toDisplayString(places: Int = 6): String {
+        Log.d(TAG, "delta fun worked, idk about this conversion")
+        return this.setScale(places, RoundingMode.HALF_EVEN).toString()
     }
 
     companion object {

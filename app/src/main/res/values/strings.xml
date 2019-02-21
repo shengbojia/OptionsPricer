@@ -18,4 +18,9 @@
     <string name="all_put">Put</string>
     <string name="all_optionsprice">Price</string>
     <string name="all_help">Help</string>
+    <string name="all_delta">Delta</string>
+    <string name="all_gamma">Gamma</string>
+    <string name="all_vega">Vega</string>
+    <string name="all_theta">Theta</string>
+    <string name="all_rho">Rho</string>
 </resources>

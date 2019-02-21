@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/layout2">
     <android.support.constraint.ConstraintLayout
             android:background="@color/colorAccent"
@@ -43,7 +44,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tv_calc_stocklabel"
                     app:layout_constraintBottom_toTopOf="@id/tv_calc_timelabel"
-                    style="@style/InputLabelStyle" />
+                    style="@style/InputLabelStyle"/>
 
             <EditText
                     android:id="@+id/et_calc_strikeinput"
@@ -113,7 +114,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:text="@string/all_calculate"
-               app:backgroundTint="@color/colorPrimaryDark"
+                app:backgroundTint="@color/colorPrimaryDark"
                 android:layout_marginTop="@dimen/margin_calc_inputlabel"
                 style="@style/TitleButtonStyle"/>
 
@@ -127,7 +128,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintVertical_bias="0"
-                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_bias="0"
                 android:visibility="invisible"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
@@ -139,27 +140,89 @@
             <TextView
                     android:id="@+id/tv_calc_calllabel"
                     style="@style/OutputFieldStyle"
-                    android:text="@string/all_call"
-                    android:textStyle="bold"/>
+                    android:text="@string/all_call"/>
 
             <TextView
                     android:id="@+id/tv_calc_putlabel"
                     style="@style/OutputFieldStyle"
-                    android:text="@string/all_put"
-                    android:textStyle="bold"/>
+                    android:text="@string/all_put"/>
 
             <TextView
                     android:id="@+id/tv_calc_pricelabel"
                     style="@style/OutputFieldStyle"
-                    android:text="@string/all_optionsprice"
-                    android:textStyle="bold"/>
+                    android:text="@string/all_optionsprice"/>
 
             <TextView
-                android:id="@+id/tv_calc_cprice"
-                style="@style/OutputFieldStyle"/>
+                    android:id="@+id/tv_calc_cprice"
+                    style="@style/OutputFieldStyle"/>
 
             <TextView
                     android:id="@+id/tv_calc_pprice"
+                    style="@style/OutputFieldStyle"/>
+
+            <TextView
+                    android:id="@+id/tv_calc_deltalabel"
+                    style="@style/OutputFieldStyle"
+                    android:text="@string/all_delta"/>
+
+            <TextView
+                    android:id="@+id/tv_calc_cdelta"
+                    style="@style/OutputFieldStyle"/>
+
+            <TextView
+                    android:id="@+id/tv_calc_pdelta"
+                    style="@style/OutputFieldStyle"/>
+
+            <TextView
+                    android:id="@+id/tv_calc_gammalabel"
+                    style="@style/OutputFieldStyle"
+                    android:text="@string/all_gamma"/>
+
+            <TextView
+                    android:id="@+id/tv_calc_cgamma"
+                    style="@style/OutputFieldStyle"/>
+
+            <TextView
+                    android:id="@+id/tv_calc_pgamma"
+                    style="@style/OutputFieldStyle"/>
+
+            <TextView
+                    android:id="@+id/tv_calc_vegalabel"
+                    style="@style/OutputFieldStyle"
+                    android:text="@string/all_vega"/>
+
+            <TextView
+                    android:id="@+id/tv_calc_cvega"
+                    style="@style/OutputFieldStyle"/>
+
+            <TextView
+                    android:id="@+id/tv_calc_pvega"
+                    style="@style/OutputFieldStyle"/>
+
+            <TextView
+                    android:id="@+id/tv_calc_thetalabel"
+                    style="@style/OutputFieldStyle"
+                    android:text="@string/all_theta"/>
+
+            <TextView
+                    android:id="@+id/tv_calc_ctheta"
+                    style="@style/OutputFieldStyle"/>
+
+            <TextView
+                    android:id="@+id/tv_calc_ptheta"
+                    style="@style/OutputFieldStyle"/>
+
+            <TextView
+                    android:id="@+id/tv_calc_rholabel"
+                    style="@style/OutputFieldStyle"
+                    android:text="@string/all_rho"/>
+
+            <TextView
+                    android:id="@+id/tv_calc_crho"
+                    style="@style/OutputFieldStyle"/>
+
+            <TextView
+                    android:id="@+id/tv_calc_prho"
                     style="@style/OutputFieldStyle"/>
 
         </GridLayout>
