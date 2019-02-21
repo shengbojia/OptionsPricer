@@ -44,6 +44,11 @@ class TitleFragment : Fragment() {
         return binding.root
     }
 
+    /**
+     * Makes a dialog window pop up on screen, containing a brief introduction to the app. Option for the user to
+     * open a Wikipedia page on a web browser of their choosing to see more information about the model used.
+     *
+     */
     private fun showInfo() {
         val builder = AlertDialog.Builder(activity, R.style.InfoDialogStyle)
         builder.setTitle("Help")
@@ -53,13 +58,17 @@ class TitleFragment : Fragment() {
         }
 
         builder.setNegativeButton("Cancel") { _, _ ->
-
         }
 
         val dialog = builder.create()
         dialog.show()
     }
 
+    /**
+     * Sends an implicit intent to open a Wikipedia link through a web browser on the user's device.
+     *
+     * @see <a href="https://wikipedia.org/wiki/Black–Scholes_model">Link here</a>
+     */
     private fun openWikiPage() {
         val intent = Intent(Intent.ACTION_VIEW)
         intent.data = Uri.parse("https://wikipedia.org/wiki/Black–Scholes_model")
