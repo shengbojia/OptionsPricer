@@ -1,16 +1,17 @@
 package com.shengbojia.optionspricer.ui
 
+import android.app.AlertDialog
+import android.content.Intent
 import android.databinding.DataBindingUtil
+import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.Navigation
 import androidx.navigation.findNavController
-
 import com.shengbojia.optionspricer.R
-
 import com.shengbojia.optionspricer.databinding.FragmentTitleBinding
 
 /**
@@ -36,7 +37,52 @@ class TitleFragment : Fragment() {
             it.findNavController().navigate(R.id.action_titleFragment_to_calculatorFragment)
         }
 
+        binding.btnTitleInfo.setOnClickListener {
+            showInfo()
+        }
+
         return binding.root
     }
 
+    /**
+     * Makes a dialog window pop up on screen, containing a brief introduction to the app. Option for the user to
+     * open a Wikipedia page on a web browser of their choosing to see more information about the model used.
+     *
+     */
+    private fun showInfo() {
+        val builder = AlertDialog.Builder(activity, R.style.InfoDialogStyle)
+        builder.setTitle("Help")
+        builder.setMessage("This app uses the Black-Scholes-Merton model to price vanilla European options.")
+        builder.setPositiveButton("More info") { _, _ ->
+            openWikiPage()
+        }
+
+        builder.setNegativeButton("Cancel") { _, _ ->
+        }
+
+        val dialog = builder.create()
+        dialog.show()
+    }
+
+    /**
+     * Sends an implicit intent to open a Wikipedia link through a web browser on the user's device.
+     *
+     * @see <a href="https://wikipedia.org/wiki/Black–Scholes_model">Link here</a>
+     */
+    private fun openWikiPage() {
+        val intent = Intent(Intent.ACTION_VIEW)
+        intent.data = Uri.parse("https://wikipedia.org/wiki/Black–Scholes_model")
+
+        val chooserIntent = Intent.createChooser(intent, "Open this link with: ")
+
+        if (intent.resolveActivity(activity?.packageManager) != null) {
+            startActivity(chooserIntent)
+        } else {
+            Log.d(TAG, "Could not resolve intent!")
+        }
+    }
+
+    companion object {
+        private const val TAG = "TitleFrag"
+    }
 }

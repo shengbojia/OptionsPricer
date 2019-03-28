@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
     </style>
 
     <style name="TitleButtonStyle">
@@ -15,6 +16,12 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textColor">@color/colorAccent</item>
+    </style>
+    
+    <style name="InfoDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
     </style>
 
     <style name="InputLabelStyle">
@@ -51,8 +58,9 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">@dimen/width_calc_outputfield</item>
         <item name="android:textAlignment">center</item>
-        <item name="android:paddingTop">@dimen/padding_title_button</item>
-        <item name="android:paddingBottom">@dimen/padding_title_button</item>
+        <item name="android:paddingTop">@dimen/padding_calc_outputfield</item>
+        <item name="android:paddingBottom">@dimen/padding_calc_outputfield</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
 </resources>
